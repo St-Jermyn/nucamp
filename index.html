@@ -29,7 +29,7 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div clas="col col-md-4 col-xl-2 mt-4">
-                    <a><button type="submit" class="btn btn-primary">Reserve Campsite</button></a>
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="auto" data-html="true" title="or call us at <br><strong>1-206-555-1234</strong>">Reserve Campsite</a>
                 </div>
             </div>
             
@@ -106,10 +106,10 @@
                     <h3 class="card-header bg-info text-light">Reserve a Campsite</h3>
                     <div class="card-body">
                         <form id="reverse form">
-                            <div class="row row-content">
-                                <label class="col col-sm-6" ofr="numCampers">Number of Campers</label>
+                            <div class="row form-group">
+                                <label class="col col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
                               
-                                <select class="col col-sm-6 col-12" name="numCampers" id="numCampers">
+                                <select class="col col-12 col-sm-6 form-control" name="numCampers" id="numCampers">
                                         <option>select</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -118,14 +118,16 @@
                                         <option value="5">5</option>
                                         <option value="6">6</option>
                                 </select> 
+                            
+
+                            
+                            </div>
+                            <div class="row form-group"> 
+                                <label class="col col-sm-6 col-form-label" text="date" for="date">Date</label>
+                                <input class="col col-sm-6 col-12" type="date" id="date" name="date" value="placeholder"> </input>
                                 
                             </div>
-                            <div class="row row-content"> 
-                                <label class="col col-sm-6" text="date" for="date">Date</label>
-                                <input class="col col-sm-6 col-12"type="date" id="date" name="date" value="placeholder"> </input>
-                                
-                            </div>
-                            <div class="row row-content">
+                            <div class="row form-group">
                                 <div class="col">
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
@@ -170,7 +172,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script>
+        $(function() {
+            $(`[data-toggle="tooltip"]`).tooltip()
+        })
+    </script>
 
 </body>
 
